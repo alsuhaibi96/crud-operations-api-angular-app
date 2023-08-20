@@ -1,0 +1,17 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "name": "Science",
+      "author": "J. K. Rowling",
+      "cost": 520
+    },
+    {
+      "id": 2,
+      "author": "Ali",
+      "name": "Geography",
+      "cost": 340,
+      "auther": "ali"
+    }
+  ]
+}

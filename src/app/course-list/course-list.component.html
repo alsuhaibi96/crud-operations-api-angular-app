@@ -1,0 +1,46 @@
+<div class="container custom-container-2 mt-5">
+    <!-- Show it when there is no course -->
+    <div class="no-data text-center" *ngIf="Course.length == 0">
+      <p>There is no course added yet!</p>
+      <button class="btn btn-outline-primary" routerLink="/create-course">
+        Add Course
+      </button>
+    </div>
+    <!-- Courses list table, it hides when there is no course -->
+    <div *ngIf="Course.length !== 0">
+      <h3 class="mb-3 text-center">Courses List</h3>
+      <div class="col-md-12">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col"> Course Id</th>
+              <th scope="col">Name</th>
+              <th scope="col">Auther</th>
+              <th scope="col">Cost</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let course of Course">
+              <td>{{ course.id }}</td>
+              <td>{{ course.name }}</td>
+              <td>{{ course.auther }}</td>
+              <td>{{ course.cost }}</td>
+              <td>
+                <span
+                  class="edit btn btn-sm btn-outline-primary me-2"
+                  routerLink="/courses-edit/{{ course.id }}"
+                  >Edit</span
+                >
+                <span
+                  class="delete edit btn btn-sm btn-outline-danger"
+                  (click)="deleteCourse(course.id)"
+                  >Delete</span
+                >
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>

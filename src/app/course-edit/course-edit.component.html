@@ -1,0 +1,37 @@
+<div class="container custom-container">
+    <div class="col-md-12">
+      <h3 class="mb-3 text-center">Update Course</h3>
+      <div class="mb-3">
+        <input
+          type="text"
+          [(ngModel)]="courseData.name"
+          class="form-control"
+          placeholder="Name"
+        />
+      </div>
+      <div class="mb-3">
+        <input
+          type="text"
+          [(ngModel)]="courseData.auther"
+          class="form-control"
+          placeholder="Auther"
+        />
+      </div>
+      <div class="mb-3">
+        <input
+          type="text"
+          [(ngModel)]="courseData.cost"
+          class="form-control"
+          placeholder="cost"
+        />
+      </div>
+      <div class="form-group">
+        <button
+          class="btn btn-success btn-lg btn-block"
+          (click)="updateCourse()"
+        >
+          Update Course
+        </button>
+      </div>
+    </div>
+  </div>
